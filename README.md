@@ -282,9 +282,9 @@ java -jar target/libronova-1.0.0.jar
 
 | Username | Password | Role |
 |----------|----------|------|
-| admin | admin123 | ADMINISTRATOR |
-| maria | maria123 | LIBRARIAN |
-| carlos | carlos123 | ASSISTANT |
+| admin | ADMINISTRATOR | ADMINISTRATOR |
+| maria | LIBRARIAN | LIBRARIAN |
+| carlos | ASSISTANT | ASSISTANT |
 
 ---
 
