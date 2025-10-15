@@ -1,0 +1,1268 @@
+[2025-10-14 18:44:44] [INFO] [APPLICATION] Log file initialized: /home/Coder/Escritorio/booknova (copia)/app.log
+[2025-10-14 18:44:44] [INFO] [CONNECTION_DB] Database configuration loaded successfully
+[2025-10-14 18:44:44] [INFO] [APPLICATION] BookNova application started
+[2025-10-14 18:44:44] [INFO] [APPLICATION] Java version: 21.0.8
+[2025-10-14 18:44:44] [INFO] [APPLICATION] OS: Linux 6.8.0-85-generic
+[2025-10-14 18:44:44] [ACTIVITY] [USER] System Administrator - Application started
+[2025-10-14 18:44:52] [ACTIVITY] [USER] System Administrator - Navigated to Loans module
+[2025-10-14 18:44:52] [ERROR] [DATABASE] Failed to establish database connection
+[2025-10-14 18:44:52] [ERROR] [CONNECTION_DB] Failed to establish database connection: (conn=373) Access denied for user 'root'@'localhost' (using password: YES)
+Exception details:
+java.sql.SQLInvalidAuthorizationSpecException: (conn=373) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.LoanRepositoryJdbc.findAll(LoanRepositoryJdbc.java:148)
+	at com.mycompany.booknova.service.impl.LoanServiceImpl.getAllLoans(LoanServiceImpl.java:229)
+	at com.mycompany.booknova.ui.LoansView.loadLoans(LoansView.java:259)
+	at com.mycompany.booknova.ui.LoansView.<init>(LoansView.java:53)
+	at com.mycompany.booknova.ui.MainApp.showLoansView(MainApp.java:302)
+	at com.mycompany.booknova.ui.MainApp.lambda$createNavigationMenu$3(MainApp.java:116)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+--- End of exception ---
+[2025-10-14 18:44:55] [ACTIVITY] [USER] System Administrator - Navigated to Reports module
+[2025-10-14 18:44:57] [INFO] [REPORT_SERVICE] Starting book catalog CSV export to: book_catalog_20251014_184457.csv
+[2025-10-14 18:44:57] [ERROR] [DATABASE] Failed to establish database connection
+[2025-10-14 18:44:57] [ERROR] [CONNECTION_DB] Failed to establish database connection: (conn=374) Access denied for user 'root'@'localhost' (using password: YES)
+Exception details:
+java.sql.SQLInvalidAuthorizationSpecException: (conn=374) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:161)
+	at com.mycompany.booknova.service.impl.BookServiceImpl.getAllBooks(BookServiceImpl.java:66)
+	at com.mycompany.booknova.service.reports.ReportServiceImpl.exportBookCatalogToCsv(ReportServiceImpl.java:56)
+	at com.mycompany.booknova.ui.MainApp.exportReport(MainApp.java:458)
+	at com.mycompany.booknova.ui.MainApp.lambda$showReportsView$9(MainApp.java:344)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+--- End of exception ---
+[2025-10-14 18:44:57] [ERROR] [REPORT_SERVICE] Failed to export book catalog: Database error: Error finding all books
+Exception details:
+com.mycompany.booknova.exceptions.DatabaseException: Database error: Error finding all books
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:172)
+	at com.mycompany.booknova.service.impl.BookServiceImpl.getAllBooks(BookServiceImpl.java:66)
+	at com.mycompany.booknova.service.reports.ReportServiceImpl.exportBookCatalogToCsv(ReportServiceImpl.java:56)
+	at com.mycompany.booknova.ui.MainApp.exportReport(MainApp.java:458)
+	at com.mycompany.booknova.ui.MainApp.lambda$showReportsView$9(MainApp.java:344)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLInvalidAuthorizationSpecException: (conn=374) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:161)
+	... 49 more
+--- End of exception ---
+[2025-10-14 18:44:57] [ERROR] [MAIN_APP] Error during report export: Database error: Error finding all books
+Exception details:
+com.mycompany.booknova.exceptions.DatabaseException: Database error: Error finding all books
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:172)
+	at com.mycompany.booknova.service.impl.BookServiceImpl.getAllBooks(BookServiceImpl.java:66)
+	at com.mycompany.booknova.service.reports.ReportServiceImpl.exportBookCatalogToCsv(ReportServiceImpl.java:56)
+	at com.mycompany.booknova.ui.MainApp.exportReport(MainApp.java:458)
+	at com.mycompany.booknova.ui.MainApp.lambda$showReportsView$9(MainApp.java:344)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLInvalidAuthorizationSpecException: (conn=374) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:161)
+	... 49 more
+--- End of exception ---
+[2025-10-14 18:44:59] [INFO] [REPORT_SERVICE] Starting book catalog CSV export to: book_catalog_20251014_184459.csv
+[2025-10-14 18:44:59] [ERROR] [DATABASE] Failed to establish database connection
+[2025-10-14 18:44:59] [ERROR] [CONNECTION_DB] Failed to establish database connection: (conn=375) Access denied for user 'root'@'localhost' (using password: YES)
+Exception details:
+java.sql.SQLInvalidAuthorizationSpecException: (conn=375) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:161)
+	at com.mycompany.booknova.service.impl.BookServiceImpl.getAllBooks(BookServiceImpl.java:66)
+	at com.mycompany.booknova.service.reports.ReportServiceImpl.exportBookCatalogToCsv(ReportServiceImpl.java:56)
+	at com.mycompany.booknova.ui.MainApp.exportReport(MainApp.java:458)
+	at com.mycompany.booknova.ui.MainApp.lambda$showReportsView$9(MainApp.java:344)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+--- End of exception ---
+[2025-10-14 18:44:59] [ERROR] [REPORT_SERVICE] Failed to export book catalog: Database error: Error finding all books
+Exception details:
+com.mycompany.booknova.exceptions.DatabaseException: Database error: Error finding all books
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:172)
+	at com.mycompany.booknova.service.impl.BookServiceImpl.getAllBooks(BookServiceImpl.java:66)
+	at com.mycompany.booknova.service.reports.ReportServiceImpl.exportBookCatalogToCsv(ReportServiceImpl.java:56)
+	at com.mycompany.booknova.ui.MainApp.exportReport(MainApp.java:458)
+	at com.mycompany.booknova.ui.MainApp.lambda$showReportsView$9(MainApp.java:344)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLInvalidAuthorizationSpecException: (conn=375) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:161)
+	... 49 more
+--- End of exception ---
+[2025-10-14 18:44:59] [ERROR] [MAIN_APP] Error during report export: Database error: Error finding all books
+Exception details:
+com.mycompany.booknova.exceptions.DatabaseException: Database error: Error finding all books
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:172)
+	at com.mycompany.booknova.service.impl.BookServiceImpl.getAllBooks(BookServiceImpl.java:66)
+	at com.mycompany.booknova.service.reports.ReportServiceImpl.exportBookCatalogToCsv(ReportServiceImpl.java:56)
+	at com.mycompany.booknova.ui.MainApp.exportReport(MainApp.java:458)
+	at com.mycompany.booknova.ui.MainApp.lambda$showReportsView$9(MainApp.java:344)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLInvalidAuthorizationSpecException: (conn=375) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:161)
+	... 49 more
+--- End of exception ---
+[2025-10-14 18:45:00] [INFO] [REPORT_SERVICE] Starting overdue loans CSV export to: overdue_loans_20251014_184500.csv
+[2025-10-14 18:45:00] [ERROR] [DATABASE] Failed to establish database connection
+[2025-10-14 18:45:00] [ERROR] [CONNECTION_DB] Failed to establish database connection: (conn=376) Access denied for user 'root'@'localhost' (using password: YES)
+Exception details:
+java.sql.SQLInvalidAuthorizationSpecException: (conn=376) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.LoanRepositoryJdbc.findAll(LoanRepositoryJdbc.java:148)
+	at com.mycompany.booknova.service.impl.LoanServiceImpl.getAllLoans(LoanServiceImpl.java:229)
+	at com.mycompany.booknova.service.reports.ReportServiceImpl.exportOverdueLoansToCSv(ReportServiceImpl.java:93)
+	at com.mycompany.booknova.ui.MainApp.exportReport(MainApp.java:465)
+	at com.mycompany.booknova.ui.MainApp.lambda$showReportsView$10(MainApp.java:345)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+--- End of exception ---
+[2025-10-14 18:45:00] [ERROR] [REPORT_SERVICE] Failed to export overdue loans: Database error: Error finding all loans
+Exception details:
+com.mycompany.booknova.exceptions.DatabaseException: Database error: Error finding all loans
+	at com.mycompany.booknova.repository.jdbc.LoanRepositoryJdbc.findAll(LoanRepositoryJdbc.java:158)
+	at com.mycompany.booknova.service.impl.LoanServiceImpl.getAllLoans(LoanServiceImpl.java:229)
+	at com.mycompany.booknova.service.reports.ReportServiceImpl.exportOverdueLoansToCSv(ReportServiceImpl.java:93)
+	at com.mycompany.booknova.ui.MainApp.exportReport(MainApp.java:465)
+	at com.mycompany.booknova.ui.MainApp.lambda$showReportsView$10(MainApp.java:345)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLInvalidAuthorizationSpecException: (conn=376) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.LoanRepositoryJdbc.findAll(LoanRepositoryJdbc.java:148)
+	... 49 more
+--- End of exception ---
+[2025-10-14 18:45:00] [ERROR] [MAIN_APP] Error during report export: Database error: Error finding all loans
+Exception details:
+com.mycompany.booknova.exceptions.DatabaseException: Database error: Error finding all loans
+	at com.mycompany.booknova.repository.jdbc.LoanRepositoryJdbc.findAll(LoanRepositoryJdbc.java:158)
+	at com.mycompany.booknova.service.impl.LoanServiceImpl.getAllLoans(LoanServiceImpl.java:229)
+	at com.mycompany.booknova.service.reports.ReportServiceImpl.exportOverdueLoansToCSv(ReportServiceImpl.java:93)
+	at com.mycompany.booknova.ui.MainApp.exportReport(MainApp.java:465)
+	at com.mycompany.booknova.ui.MainApp.lambda$showReportsView$10(MainApp.java:345)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLInvalidAuthorizationSpecException: (conn=376) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.LoanRepositoryJdbc.findAll(LoanRepositoryJdbc.java:148)
+	... 49 more
+--- End of exception ---
+[2025-10-14 18:58:30] [INFO] [CONNECTION_DB] Database configuration loaded successfully
+[2025-10-14 18:58:30] [ERROR] [DATABASE] Failed to establish database connection
+[2025-10-14 18:58:30] [ERROR] [CONNECTION_DB] Failed to establish database connection: (conn=377) Access denied for user 'root'@'localhost' (using password: YES)
+Exception details:
+java.sql.SQLInvalidAuthorizationSpecException: (conn=377) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findByIsbn(BookRepositoryJdbc.java:138)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.save(BookRepositoryJdbc.java:30)
+	at com.mycompany.booknova.service.impl.BookServiceImpl.createBook(BookServiceImpl.java:29)
+	at com.mycompany.booknova.BookServiceTest.lambda$testCreateBook_WithValidData_ShouldNotThrowException$0(BookServiceTest.java:44)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3136)
+	at com.mycompany.booknova.BookServiceTest.testCreateBook_WithValidData_ShouldNotThrowException(BookServiceTest.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+--- End of exception ---
+[2025-10-14 18:59:02] [INFO] [APPLICATION] BookNova application started
+[2025-10-14 18:59:02] [INFO] [APPLICATION] Java version: 21.0.8
+[2025-10-14 18:59:02] [INFO] [APPLICATION] OS: Linux 6.8.0-85-generic
+[2025-10-14 18:59:02] [ACTIVITY] [USER] System Administrator - Application started
+[2025-10-14 19:00:38] [INFO] [MOCK_REPORT_SERVICE] Starting mock book catalog CSV export to: test_books.csv
+[2025-10-14 19:00:38] [SUCCESS] [MOCK_REPORT_SERVICE] Mock book catalog exported successfully. 5 books exported to test_books.csv
+[2025-10-14 19:00:38] [INFO] [MOCK_REPORT_SERVICE] Starting mock overdue loans CSV export to: test_overdue.csv
+[2025-10-14 19:00:38] [SUCCESS] [MOCK_REPORT_SERVICE] Mock overdue loans exported successfully. 0 overdue loans exported to test_overdue.csv
+[2025-10-14 19:00:38] [INFO] [MOCK_REPORT_SERVICE] Starting mock active loans CSV export to: test_active.csv
+[2025-10-14 19:00:38] [SUCCESS] [MOCK_REPORT_SERVICE] Mock active loans exported successfully. 3 active loans exported to test_active.csv
+[2025-10-14 19:00:38] [INFO] [MOCK_REPORT_SERVICE] Starting mock members CSV export to: test_members.csv
+[2025-10-14 19:00:38] [SUCCESS] [MOCK_REPORT_SERVICE] Mock members exported successfully. 4 members exported to test_members.csv
+[2025-10-14 19:00:55] [INFO] [CONNECTION_DB] Database configuration loaded successfully
+[2025-10-14 19:00:55] [ERROR] [DATABASE] Failed to establish database connection
+[2025-10-14 19:00:55] [ERROR] [CONNECTION_DB] Failed to establish database connection: (conn=378) Access denied for user 'root'@'localhost' (using password: YES)
+Exception details:
+java.sql.SQLInvalidAuthorizationSpecException: (conn=378) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findByIsbn(BookRepositoryJdbc.java:138)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.save(BookRepositoryJdbc.java:30)
+	at com.mycompany.booknova.service.impl.BookServiceImpl.createBook(BookServiceImpl.java:29)
+	at com.mycompany.booknova.BookServiceTest.lambda$testCreateBook_WithValidData_ShouldNotThrowException$0(BookServiceTest.java:44)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3136)
+	at com.mycompany.booknova.BookServiceTest.testCreateBook_WithValidData_ShouldNotThrowException(BookServiceTest.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+--- End of exception ---
+[2025-10-14 19:01:01] [INFO] [APPLICATION] BookNova application started
+[2025-10-14 19:01:01] [INFO] [APPLICATION] Java version: 21.0.8
+[2025-10-14 19:01:01] [INFO] [APPLICATION] OS: Linux 6.8.0-85-generic
+[2025-10-14 19:01:01] [ACTIVITY] [USER] System Administrator - Application started
+[2025-10-14 19:03:29] [INFO] [APPLICATION] BookNova application started
+[2025-10-14 19:03:29] [INFO] [APPLICATION] Java version: 21.0.8
+[2025-10-14 19:03:29] [INFO] [APPLICATION] OS: Linux 6.8.0-85-generic
+[2025-10-14 19:03:29] [ACTIVITY] [USER] System Administrator - Application started
+[2025-10-14 19:03:50] [ACTIVITY] [USER] System Administrator - Navigated to Reports module
+[2025-10-14 19:03:51] [INFO] [MOCK_REPORT_SERVICE] Starting mock book catalog CSV export to: book_catalog_20251014_190351.csv
+[2025-10-14 19:03:51] [SUCCESS] [MOCK_REPORT_SERVICE] Mock book catalog exported successfully. 5 books exported to book_catalog_20251014_190351.csv
+[2025-10-14 19:03:51] [ACTIVITY] [USER] System Administrator - Exported book catalog to CSV: book_catalog_20251014_190351.csv
+[2025-10-14 19:03:53] [INFO] [MOCK_REPORT_SERVICE] Starting mock overdue loans CSV export to: overdue_loans_20251014_190353.csv
+[2025-10-14 19:03:53] [SUCCESS] [MOCK_REPORT_SERVICE] Mock overdue loans exported successfully. 0 overdue loans exported to overdue_loans_20251014_190353.csv
+[2025-10-14 19:03:53] [ACTIVITY] [USER] System Administrator - Exported overdue loans to CSV: overdue_loans_20251014_190353.csv
+[2025-10-14 19:03:55] [INFO] [MOCK_REPORT_SERVICE] Starting mock active loans CSV export to: active_loans_20251014_190355.csv
+[2025-10-14 19:03:55] [SUCCESS] [MOCK_REPORT_SERVICE] Mock active loans exported successfully. 3 active loans exported to active_loans_20251014_190355.csv
+[2025-10-14 19:03:55] [ACTIVITY] [USER] System Administrator - Exported active loans to CSV: active_loans_20251014_190355.csv
+[2025-10-14 19:03:56] [INFO] [MOCK_REPORT_SERVICE] Starting mock members CSV export to: members_list_20251014_190356.csv
+[2025-10-14 19:03:56] [SUCCESS] [MOCK_REPORT_SERVICE] Mock members exported successfully. 4 members exported to members_list_20251014_190356.csv
+[2025-10-14 19:03:56] [ACTIVITY] [USER] System Administrator - Exported members list to CSV: members_list_20251014_190356.csv
+[2025-10-14 19:14:45] [INFO] [AUTHENTICATION] Mock authentication service initialized with 4 users
+[2025-10-14 19:15:38] [INFO] [AUTHENTICATION] Mock authentication service initialized with 4 users
+[2025-10-14 19:15:38] [INFO] [AUTHENTICATION] Login attempt for username: admin
+[2025-10-14 19:15:38] [SUCCESS] [AUTHENTICATION] Login successful for user: admin (ADMINISTRATOR)
+[2025-10-14 19:15:38] [ACTIVITY] [USER] System Administrator - User logged in successfully
+[2025-10-14 19:15:38] [ACTIVITY] [USER] System Administrator - User logged out
+[2025-10-14 19:15:38] [INFO] [AUTHENTICATION] User logged out: admin
+[2025-10-14 19:15:38] [INFO] [AUTHENTICATION] Login attempt for username: librarian
+[2025-10-14 19:15:38] [SUCCESS] [AUTHENTICATION] Login successful for user: librarian (LIBRARIAN)
+[2025-10-14 19:15:38] [ACTIVITY] [USER] María Bibliotecaria - User logged in successfully
+[2025-10-14 19:15:38] [ACTIVITY] [USER] María Bibliotecaria - User logged out
+[2025-10-14 19:15:38] [INFO] [AUTHENTICATION] User logged out: librarian
+[2025-10-14 19:15:38] [INFO] [AUTHENTICATION] Login attempt for username: assistant
+[2025-10-14 19:15:38] [SUCCESS] [AUTHENTICATION] Login successful for user: assistant (ASSISTANT)
+[2025-10-14 19:15:38] [ACTIVITY] [USER] Ana Asistente - User logged in successfully
+[2025-10-14 19:15:38] [ACTIVITY] [USER] Ana Asistente - User logged out
+[2025-10-14 19:15:38] [INFO] [AUTHENTICATION] User logged out: assistant
+[2025-10-14 19:15:38] [INFO] [AUTHENTICATION] Login attempt for username: invalid
+[2025-10-14 19:15:38] [ERROR] [AUTHENTICATION] Login failed - Invalid credentials for username: invalid
+[2025-10-14 19:15:38] [INFO] [AUTHENTICATION] Login attempt for username: 
+[2025-10-14 19:15:38] [ERROR] [AUTHENTICATION] Login failed - Empty credentials
+[2025-10-14 19:17:14] [INFO] [AUTHENTICATION] Mock authentication service initialized with 4 users
+[2025-10-14 19:17:20] [INFO] [AUTHENTICATION] Login attempt for username: admin
+[2025-10-14 19:17:20] [SUCCESS] [AUTHENTICATION] Login successful for user: admin (ADMINISTRATOR)
+[2025-10-14 19:17:20] [ACTIVITY] [USER] System Administrator - User logged in successfully
+[2025-10-14 19:17:21] [INFO] [APPLICATION] BookNova application started
+[2025-10-14 19:17:21] [INFO] [APPLICATION] Java version: 21.0.8
+[2025-10-14 19:17:21] [INFO] [APPLICATION] OS: Linux 6.8.0-85-generic
+[2025-10-14 19:17:21] [ACTIVITY] [USER] System Administrator - Main application started
+[2025-10-14 19:17:27] [ACTIVITY] [USER] System Administrator - Navigated to Books module
+[2025-10-14 19:17:28] [INFO] [CONNECTION_DB] Database configuration loaded successfully
+[2025-10-14 19:17:28] [ERROR] [DATABASE] Failed to establish database connection
+[2025-10-14 19:17:28] [ERROR] [CONNECTION_DB] Failed to establish database connection: (conn=379) Access denied for user 'root'@'localhost' (using password: YES)
+Exception details:
+java.sql.SQLInvalidAuthorizationSpecException: (conn=379) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.mycompany.booknova.infra.config.ConnectionDB.getConnection(ConnectionDB.java:122)
+	at com.mycompany.booknova.repository.jdbc.BookRepositoryJdbc.findAll(BookRepositoryJdbc.java:161)
+	at com.mycompany.booknova.service.impl.BookServiceImpl.getAllBooks(BookServiceImpl.java:66)
+	at com.mycompany.booknova.ui.BooksView.loadBooks(BooksView.java:253)
+	at com.mycompany.booknova.ui.BooksView.<init>(BooksView.java:51)
+	at com.mycompany.booknova.ui.MainApp.showBooksView(MainApp.java:290)
+	at com.mycompany.booknova.ui.MainApp.lambda$createNavigationMenu$2(MainApp.java:128)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+--- End of exception ---
+[2025-10-14 19:22:11] [INFO] [AUTHENTICATION] Mock authentication service initialized with 4 users
+[2025-10-14 19:22:19] [INFO] [AUTHENTICATION] Login attempt for username: admin
+[2025-10-14 19:22:19] [SUCCESS] [AUTHENTICATION] Login successful for user: admin (ADMINISTRATOR)
+[2025-10-14 19:22:19] [ACTIVITY] [USER] System Administrator - User logged in successfully
+[2025-10-14 19:22:20] [INFO] [APPLICATION] BookNova application started
+[2025-10-14 19:22:20] [INFO] [APPLICATION] Java version: 17.0.16
+[2025-10-14 19:22:20] [INFO] [APPLICATION] OS: Linux 6.8.0-85-generic
+[2025-10-14 19:22:20] [ACTIVITY] [USER] System Administrator - Main application started
+[2025-10-14 19:22:25] [ACTIVITY] [USER] System Administrator - Navigated to Books module
+[2025-10-14 19:22:25] [INFO] [CONNECTION_DB] Database configuration loaded successfully
+[2025-10-14 19:22:25] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:26] [ACTIVITY] [USER] System Administrator - Navigated to Books module
+[2025-10-14 19:22:26] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:26] [ACTIVITY] [USER] System Administrator - Navigated to Members module
+[2025-10-14 19:22:26] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [ACTIVITY] [USER] System Administrator - Navigated to Loans module
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:27] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:28] [ACTIVITY] [USER] System Administrator - Navigated to Reports module
+[2025-10-14 19:22:30] [ACTIVITY] [USER] System Administrator - Navigated to Settings
+[2025-10-14 19:22:31] [ACTIVITY] [USER] System Administrator - Navigated to Members module
+[2025-10-14 19:22:31] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:35] [ACTIVITY] [USER] System Administrator - Navigated to Reports module
+[2025-10-14 19:22:36] [INFO] [MOCK_REPORT_SERVICE] Starting mock book catalog CSV export to: book_catalog_20251014_192236.csv
+[2025-10-14 19:22:36] [SUCCESS] [MOCK_REPORT_SERVICE] Mock book catalog exported successfully. 5 books exported to book_catalog_20251014_192236.csv
+[2025-10-14 19:22:36] [ACTIVITY] [USER] System Administrator - Exported book catalog to CSV: book_catalog_20251014_192236.csv
+[2025-10-14 19:22:50] [ACTIVITY] [USER] System Administrator - Navigated to Loans module
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:50] [ACTIVITY] [USER] System Administrator - Navigated to Members module
+[2025-10-14 19:22:50] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:22:52] [ACTIVITY] [USER] System Administrator - User logged out
+[2025-10-14 19:22:52] [INFO] [AUTHENTICATION] User logged out: admin
+[2025-10-14 19:22:52] [ACTIVITY] [USER] System Administrator - User logged out, returning to login screen
+[2025-10-14 19:23:10] [INFO] [AUTHENTICATION] Login attempt for username: librarian
+[2025-10-14 19:23:10] [SUCCESS] [AUTHENTICATION] Login successful for user: librarian (LIBRARIAN)
+[2025-10-14 19:23:10] [ACTIVITY] [USER] María Bibliotecaria - User logged in successfully
+[2025-10-14 19:23:11] [INFO] [APPLICATION] BookNova application started
+[2025-10-14 19:23:11] [INFO] [APPLICATION] Java version: 17.0.16
+[2025-10-14 19:23:11] [INFO] [APPLICATION] OS: Linux 6.8.0-85-generic
+[2025-10-14 19:23:11] [ACTIVITY] [USER] María Bibliotecaria - Main application started
+[2025-10-14 19:23:12] [ACTIVITY] [USER] María Bibliotecaria - Navigated to Members module
+[2025-10-14 19:23:12] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:13] [ACTIVITY] [USER] María Bibliotecaria - Navigated to Books module
+[2025-10-14 19:23:13] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:13] [ACTIVITY] [USER] María Bibliotecaria - Navigated to Members module
+[2025-10-14 19:23:13] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [ACTIVITY] [USER] María Bibliotecaria - Navigated to Loans module
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [ACTIVITY] [USER] María Bibliotecaria - Navigated to Loans module
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:14] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:17] [INFO] [DATABASE] Database connection established successfully
+[2025-10-14 19:23:24] [ACTIVITY] [USER] María Bibliotecaria - Navigated to Settings
+[2025-10-14 19:23:29] [ACTIVITY] [USER] María Bibliotecaria - Application exit requested
+[2025-10-14 19:23:29] [INFO] [APPLICATION] BookNova application shutdown
