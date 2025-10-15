@@ -44,7 +44,6 @@ A complete authentication system has been developed for **LibroNova**, featuring
 ## 🔧 How to Use the System
 
 ### ▶ Run the Application
-```bash
 cd "/home/Coder/Escritorio/booknova new"
 mvn javafx:run
 
