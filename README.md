@@ -18,7 +18,6 @@
 - [Testing](#testing)
 - [Project Structure](#project-structure)
 - [UML Diagrams](#uml-diagrams)
-- [Screenshots](#screenshots)
 - [API Documentation](#api-documentation)
 - [Contributing](#contributing)
 - [License](#license)
@@ -617,64 +616,6 @@ graph TB
 
 ---
 
-## 📸 Screenshots
-
-### Main Menu
-
-![Main Menu](docs/screenshots/main_menu.png)
-
-*Main application menu with access to all modules*
-
-### Book Management
-
-![Book Registration](docs/screenshots/book_registration.png)
-
-*Register new books with ISBN validation*
-
-![Book Search](docs/screenshots/book_search.png)
-
-*Search and filter books by various criteria*
-
-### Member Management
-
-![Member Registration](docs/screenshots/member_registration.png)
-
-*Register new library members with membership type selection*
-
-### Loan Management
-
-![Loan Registration](docs/screenshots/loan_registration.png)
-
-*Register new book loans with validation*
-
-![Return Book](docs/screenshots/return_book.png)
-
-*Process book returns with automatic penalty calculation*
-
-### Reports
-
-![Overdue Loans Report](docs/screenshots/overdue_report.png)
-
-*View and export overdue loans report*
-
-![CSV Export](docs/screenshots/csv_export.png)
-
-*Export catalog and loan reports to CSV*
-
-### JOptionPane Dialogs
-
-![Success Dialog](docs/screenshots/success_dialog.png)
-
-*Success confirmation dialog*
-
-![Error Dialog](docs/screenshots/error_dialog.png)
-
-*Error handling with user-friendly messages*
-
-![Validation Dialog](docs/screenshots/validation_dialog.png)
-
-*Business rule validation messages*
-
 ---
 
 ## 📖 API Documentation
@@ -807,26 +748,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **LibroNova Team** - *Initial work* - [GitHub Profile](https://github.com/libronova)
-
+Reinaldo Leal 
+CC 1151472438
+Clan Cienaga
 ---
 
-## 🙏 Acknowledgments
-
-- Thanks to all contributors
-- Inspired by modern library management systems
-- Built with best practices in software architecture
-
----
-
-## 📞 Support
-
-For issues, questions, or contributions:
-
-- **Email**: support@libronova.com
-- **Issues**: [GitHub Issues](https://github.com/yourusername/libronova/issues)
-- **Documentation**: [Wiki](https://github.com/yourusername/libronova/wiki)
-
----
 
 **Made with ❤️ by LibroNova Team*
